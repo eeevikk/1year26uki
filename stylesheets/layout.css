@@ -1,9 +1,12 @@
 * {
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: "PT Root UI";
 }
 h1,
 h2,
@@ -69,4 +72,84 @@ hr {
 }
 hr {
   border-bottom: none;
+}
+li {
+  margin: 20px 0;
+  margin-left: 20px;
+}
+
+ul li {
+  list-style-type: square;
+}
+ol li {
+  list-style-type: decimal;
+}
+blockquote {
+  font-style: italic;
+  position: relative;
+}
+blockquote::before {
+  content: "";
+  width: 3px;
+  height: 100px;
+  background-color: black;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -20px;
+}
+/* стили для бокового меню */
+.sidebar {
+  width: 300px;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  opacity: 0.2;
+  transition: opacity ease 0.6s;
+}
+.sidebar:hover {
+  opacity: 1;
+}
+
+.sidebar ul {
+  width: 100%;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.sidebar li {
+  list-style-type: none;
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.sidebar a {
+  color: black;
+  text-decoration: none;
+  transition: all ease 0.4s;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* стили верхнего меню */
+.menubar {
+  width: 100%;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  position: fixed;
+  top: 0;
+}
+
+.menubar a {
+  text-decoration: none;
+  color: rgb(152, 150, 150);
+  transition: color ease 0.6s;
+}
+.menubar a:hover {
+  color: black;
 }
