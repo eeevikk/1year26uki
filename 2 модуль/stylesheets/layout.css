@@ -17,9 +17,10 @@ a {
 section {
   position: relative;
   margin: 4rem auto;
+  width: 90%;
 }
 main {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 header {
@@ -133,6 +134,7 @@ header {
   border-radius: 4rem;
   display: flex;
   align-items: center;
+  container-type: inline-size;
 }
 
 .timing_ball {
@@ -141,4 +143,44 @@ header {
   height: 1.6rem;
   background-color: #e4ff00;
   border-radius: 100%;
+}
+/* бегущие строки */
+.marquee {
+  overflow-x: hidden;
+  transform: rotate(3deg);
+}
+.marquee_row {
+  background-color: red;
+  color: #e4ff00;
+  padding: 1.5rem 0;
+  font-size: 2.6vw;
+  width: 200%;
+  margin: 2rem 0;
+}
+
+/* плитки */
+.tile {
+  width: 7.5vw;
+  height: 7.5vw;
+  display: inline-block;
+  background-color: red;
+  border-radius: 5px;
+  transition:
+    opacity 6s ease-out,
+    border-radius 5s ease-out;
+}
+
+.tile:hover {
+  border-radius: 100%;
+  opacity: 0.2;
+  transition:
+    opacity 0.3s ease,
+    border-radius 0.3s ease;
+}
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin-top: 4rem;
 }
